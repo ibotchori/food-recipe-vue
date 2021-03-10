@@ -1,9 +1,9 @@
 module.exports = {
-  purge: { content: ["./public/**/*.html", "./src/**/*.vue"] },
+  purge: { content: ["./public/**/*.html", "./src/**/*.vue"] }, // files which is scanned to optimizing
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
-      colors: { // <-- add colors
+      colors: { // <-- add custom colors
         primery: '#FF6363',
         secondary: {
           100: '#E2EED5',

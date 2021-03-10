@@ -4,6 +4,7 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+/* Reusable clasess */
 .card{
     @apply bg-white rounded overflow-hidden shadow-md relative
 }

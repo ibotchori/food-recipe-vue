@@ -8,7 +8,12 @@
           <h1 class="font-bold uppercase p-4 border-b border-gray-100">
             <a href="/" class="hover:text-gray-700">Food Recipe</a>
           </h1>
-          <div class="px-4 cursor-pointer md:hidden" id="burger">
+          <!--Burger Menu -->
+          <div
+            @click="toggleClass()"
+            class="px-4 cursor-pointer md:hidden"
+            id="burger"
+          >
             <svg
               class="w-6"
               xmlns="http://www.w3.org/2000/svg"
@@ -25,7 +30,11 @@
             </svg>
           </div>
         </div>
-        <ul class="hidden md:block" id="menu">
+        <ul
+          v-bind:class="[isActive ? 'hidden' : '']"
+          class="md:block"
+          id="menu"
+        >
           <li class="text-gray-700 font-bold py-1">
             <a
               href="#"
@@ -248,6 +257,17 @@
 
 <script>
 export default {
-  name: "App"
+  name: "App",
+
+  data: function() {
+    return {
+      isActive: true  // <-- data for burger menu
+    };
+  },
+  methods: {
+    toggleClass: function() {     // <-- method for burger menu
+      this.isActive = !this.isActive;
+    }
+  }
 };
 </script>
